@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: "Noto Sans SC", system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #4A3728;
+    background-color: #FDF6EE;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #D4946A;
+    color: #FDF6EE;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Noto Serif SC", Georgia, serif;
+  }
+}
+
+@layer components {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #7DA08A, #D4946A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .noise-bg {
+    position: relative;
+  }
+  .noise-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+}
