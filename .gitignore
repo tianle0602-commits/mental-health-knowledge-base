@@ -22,12 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Temporary files
-.trae/
-*.bak
-*.txt
-*.py
-*.ps1
-*.cjs
-anchor_debug.txt
