@@ -8,7 +8,6 @@ export default defineConfig({
   base: '/mental-health-knowledge-base/',
   build: {
     sourcemap: 'hidden',
-    outDir: 'dist',
   },
   plugins: [
     react({
