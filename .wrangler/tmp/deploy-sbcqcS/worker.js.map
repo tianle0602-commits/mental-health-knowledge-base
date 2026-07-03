@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../worker.js"],
+  "sourceRoot": "D:\\Trae CN\\xiangmu\\.wrangler\\tmp\\deploy-sbcqcS",
+  "sourcesContent": ["export default {\n  async fetch(request, env) {\n    const response = await env.ASSETS.fetch(request);\n    if (response.status === 404) {\n      return env.ASSETS.fetch(new Request(new URL('/index.html', request.url), request));\n    }\n    return response;\n  }\n}"],
+  "mappings": ";AAAA,IAAO,iBAAQ;AAAA,EACb,MAAM,MAAM,SAAS,KAAK;AACxB,UAAM,WAAW,MAAM,IAAI,OAAO,MAAM,OAAO;AAC/C,QAAI,SAAS,WAAW,KAAK;AAC3B,aAAO,IAAI,OAAO,MAAM,IAAI,QAAQ,IAAI,IAAI,eAAe,QAAQ,GAAG,GAAG,OAAO,CAAC;AAAA,IACnF;AACA,WAAO;AAAA,EACT;AACF;",
+  "names": []
+}
