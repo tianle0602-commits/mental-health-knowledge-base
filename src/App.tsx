@@ -8,7 +8,7 @@ import DiaryPage from '@/pages/DiaryPage';
 
 export default function App() {
   return (
-    <BrowserRouter basename="/mental-health-knowledge-base">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
